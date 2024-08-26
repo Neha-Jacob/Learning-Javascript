@@ -1,3 +1,5 @@
+/*
+// ********** FUNDAMENTALS 1 ********** 
 let js = "amazing";
  
 if (js === "amazing") alert("Javascript is Fun!"); // popup
@@ -79,3 +81,60 @@ console.log(`----------`);
 
 const favourite = prompt(`What is your favourite number`);
 console.log(`Favourite number: ${favourite}`);
+*/
+
+'use strict'; // Activate strict mode for the entire code. should be at the top of the script. 
+function logger() {
+    console.log(`My name is Neha`);
+}
+
+logger();
+
+function fruitProcessor (apples, oranges) {
+    console.log(`apples: ${apples}, oranges: ${oranges}`);
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+    return juice;
+}
+
+let juice = fruitProcessor(5, 2);
+
+console.log(juice);
+
+const calcAge = function (birthYear) {
+    return 2024 - birthYear;
+} // anonymous function, function expression
+
+// function declarations can be called before they are defined in the code. function expressions cannot be called before initialization. This happens because of a process called hoisting
+
+const calcAge2 = birthYear => 2024 - birthYear; // arrow functions
+
+const yearsUntilRetirement = (birthYear, retirementAge) => {
+    const age = 2024 - birthYear;
+    const yearsLeft = retirementAge - age;
+    return yearsLeft;
+}
+
+console.log (yearsUntilRetirement(1999, 70));
+
+const friends = ['Chandler', 'Joey', 'Monica', 'Rachel', 'Phoebe', 'Ross'];
+console.log(friends);
+console.log(friends[1]);
+console.log(friends.length);
+
+// const arrays are mutable, and can have multiple datatypes within them
+friends[5] = 'Janice';
+console.log(friends);
+const popped = friends.pop(); 
+console.log(popped);
+console.log(friends);
+friends.push('Ross');
+console.log(friends);
+friends.unshift('Gunther'); // to add at the beginning
+console.log(friends);
+friends.shift();
+console.log(friends);
+console.log("Chandler's index:", friends.indexOf('Chandler'));
+console.log("Bob's index:", friends.indexOf('Bob'));
+console.log("Chandler's presence:", friends.includes('Chandler'));
+console.log("Bob's presence:", friends.includes('Bob'));
+
